@@ -1,0 +1,184 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: url(/images/sunnyClear.jpg) no-repeat center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.box {
+    background-color: #ffffff00;
+    width: 350px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    padding-top: 50px;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    box-shadow: 25px 35px 25px rgba(0, 0, 0, 0.576);
+    transform: translate(-50%, -50%);
+    backdrop-filter: blur(5px);
+    border: outset rgba(255, 255, 255, 0.461) 0.1px;
+    overflow: hidden;
+}
+
+#weatherIcon {
+    color: #eccc68;
+    font-size: 70px;
+    animation: icon 1.5s infinite alternate;
+}
+
+@keyframes icon {
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.5);
+    }
+}
+
+.location {
+    font-weight: 400;
+}
+
+.location i {
+    position: relative;
+    right: 5px;
+    color: #2c236a;
+    font-size: 30px;
+    animation: logo 1.5s infinite alternate;
+}
+
+@keyframes logo {
+    from{
+        color: rgba(12, 42, 61, 0.541);
+        transform: translateX(-7px);
+    }
+    to{
+        transform: translateX(7px);
+    }
+
+    
+}
+
+.box p {
+    position: relative;
+    top: -15px;
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.667);
+    font-weight: 600;
+}
+
+.info {
+    margin-top: 40%;
+}
+
+.wave {
+    opacity: 0.8;
+    position: absolute;
+    top: 50%;
+    right: -35%;
+    background-color: #8fb9d9;
+    height: 600px;
+    width: 600px;
+    border-radius: 40%;
+    z-index: -1;
+    animation: drift 9000ms infinite linear;
+}
+
+.two{
+    animation: drift 3000ms infinite linear;
+    opacity: 0.2;
+    z-index: -3;
+    /* top: 43%; */
+    /* background-color: #031a48; */
+}
+
+.three{
+    /* top: 44%; */
+    animation: drift 6000ms infinite linear;
+    opacity: 0.5;
+    z-index: -3;
+}
+
+@keyframes drift {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+form{
+    display: inline;
+}
+
+.search{
+    position: absolute;
+    top: 12%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+form input{
+    position: relative;
+    top: -3px;
+    height: 30px;
+    width: 350px;
+    border-radius: 10px;
+    border: none;
+    background-color: #cdd8f051;
+    padding: 5px 40px;
+    font-size: 16px;
+    backdrop-filter: blur(6px);
+    font-weight: 800;
+    color: black;
+}
+
+@media screen and (max-width: 580px) {
+    form input{
+        width: 250px;
+    }
+}
+
+form input::placeholder{
+    color: rgba(0, 0, 0, 0.551);
+}
+
+form button{
+    background-color: #0237785a;
+    border: none;
+    width: 65px;
+    height: 65px;
+    border-radius: 100%;
+    backdrop-filter: blur(10px);
+    position: absolute;
+    top: -15px;
+    right: -5px;
+}
+
+form button .con{
+    position: relative;
+    left: 5px;
+}
+
+form button i{
+    font-size: 28px;
+    color: rgb(255, 255, 255);
+}
+
+form button .ques{
+    font-weight: 700;
+    font-family: monospace;
+    color: rgb(0, 30, 129);
+    font-size: 20px;
+    position: relative;
+    right: 22px;
+    top: -1px;
+    
+}
